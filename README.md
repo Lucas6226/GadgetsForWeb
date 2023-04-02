@@ -6,18 +6,18 @@ Este repositorio contem um conjunto de aplicações diversas que podem ser usada
 
 # Aplicações
 
-    * Header
-    * GadgetSelector (em produção) 
-    * Simulador de banco
-    * Botões
-    * 
-    * Roda Pé
-    * DarkMode
-    * ColorAdder
-    * ColorChenger
+* Header
+* GadgetSelector (em produção) 
+* Simulador de banco
+* Botões
+* 
+* Roda Pé
+* DarkMode
+* ColorAdder
+* ColorChenger
 
 #  Header 
-    Um header com opções animadas que condizem ao modo de cor escolhido e a cor selecionada, alem de uma barra de pesquisa tambem com efeitos e cores costumizadas. 
+Um header com opções animadas que condizem ao modo de cor escolhido e a cor selecionada, alem de uma barra de pesquisa tambem com efeitos e cores costumizadas. 
 
-    > [Imagem do header][/assets/images/header-image.jpeg]
+> [Imagem do header][/assets/images/header-image.jpeg]
 
