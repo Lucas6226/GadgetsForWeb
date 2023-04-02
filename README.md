@@ -16,8 +16,15 @@ Este repositorio contem um conjunto de aplicações diversas que podem ser usada
 * ColorAdder
 * ColorChenger
 
-#  Header 
+##  Header 
 Um header com opções animadas que condizem ao modo de cor escolhido e a cor selecionada, alem de uma barra de pesquisa tambem com efeitos e cores costumizadas. 
 
-![Imagem do header](assets/images/header-image.jpeg)
+![Gif do header](assets/images/header-image.jpeg)
 
+## GadgetSelector
+
+![Gif do Gadget selector]()
+
+## Simulador de banco
+
+![Gif do simulador de banco]()
