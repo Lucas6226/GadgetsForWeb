@@ -279,9 +279,7 @@ main {
                 @include boxSize(200%, 100%);
                 padding: .6em 0px 1.2em 0px;
         
-                position: relative;
-                top: 50%;;
-        
+                @include position(relative, $top: 50%);
                 @include flex($direction: column);
         
                 transition-duration: .3s;
@@ -390,8 +388,7 @@ footer {
                 
                 border-radius: 50px;
             
-                position: absolute;
-                left: 55%;
+                @include position(absolute, $left: 55%);
                 transition-duration: .4s;
             }
         }
