@@ -12,15 +12,12 @@
 }
 
 html, body {
-    width: 100vw;
-    height: 100vh;
+    @include boxSize(100vh, 100vw);
     background-color: rgb(34, 34, 34); 
 }
 
 main {
-    height: 93%;
-    width: 100%;
-    // @include boxSize(93%, 100%);
+    @include boxSize(93%, 100%);
 
     display: grid;
     grid-template-rows: repeat(50, 1fr);
@@ -50,8 +47,7 @@ main {
 
 
         [class^="option"] {
-            height: 1.2em;
-            width: 60px;
+            @include boxSize(1.2em, 60px);
             text-align: center;
             transition-duration: .9s;
             animation-timing-function: ease-in;
@@ -65,8 +61,7 @@ main {
             }
 
             >.efeito-gdt1 {
-                height: 1.2em;
-                width: 0em;
+                @include boxSize(1.2em, 0em);
                 background-color: $cor;
         
                 border-radius: 3px;
@@ -85,12 +80,11 @@ main {
         .option-5:hover > .efeito-gdt1 {width: 3.9em;}
 
         #search-box {
-            height: 2.2em;
-            width: 25em;
+            @include boxSize(2.2em, 25em);
+            padding-left: 1em;
             background-color: $fundo-padrao-reverso;
             color: $cor-padrao;
             font-weight: 600;
-            padding-left: 1em;
             
             border-radius: 10px;
             border: 4px solid $cor;
@@ -102,9 +96,8 @@ main {
         }
 
         #search-outline, #ellipse-outline {
-            position: relative;
+            @include position(relative, $top: -10%);
             transition-duration: .15s;
-            top: -10%;
         } 
 
         #search-outline {
@@ -140,17 +133,15 @@ main {
         padding: 1em;
 
         #topo {
-            height: 10%;
-            width: 100%;
+            @include boxSize(10%, 100%);
             @include flex();
 
             #botoes, #icons {
                 @include flex();
-                gap: 1em;
-                height: 100%;
-                width: 100%;
+                @include boxSize(100%, 100%);
                 color: $cor-padrao-reversa;
-        
+                
+                gap: 1em;
             }
 
             #botoes {
@@ -163,13 +154,11 @@ main {
                 }
 
                 .quantia {
-                    height: 100%;
-                    width: 50%;
+                    @include boxSize(100%, 50%)
                 }
                 
                 .reset {
-                    height: 100%;
-                    width: 25%;
+                    @include boxSize(100%, 25%);
                     transition-duration: .2s;
         
                     &:hover{
@@ -181,7 +170,6 @@ main {
             
             #icons {
                 font-size: 1.8em;
-                
                 justify-content: right;
                 align-items: center;
     
@@ -198,28 +186,22 @@ main {
            
         #valores {
             margin: 1.5em 0px;
-            
-            height: 50%;
-            width: 100%;
-    
+            @include boxSize(50%, 100%);
             @include flex();
 
             .valor {
-                height: 100%;
-                width: 25%;
-                
+                @include boxSize(100%, 20%);
                 @include flex($direction: column);
                 
 
                 >div {
                     border-radius: 10px;
-                    width: 90%;
-            
+                    @include boxSize(no, 90%);
                     @include flex($justfy: center);
                 }
                 
                 .mais, .menos {
-                    height: 25%;
+                    @include boxSize(25%, no);
                     background-color: $cor;
                     /* transition-duration: .1s; */
                 }
@@ -230,7 +212,7 @@ main {
                 }
 
                 #valor {
-                    height: 45%;
+                    @include boxSize(45%, no);
                     background-color: $fundo-padrao;
                     color: $cor-padrao-reversa;
             
@@ -240,15 +222,12 @@ main {
         }
 
         #moedas {
-            height: 20%;
-            width: 100%;
+            @include boxSize(20%, 100%);
             margin: 1em 0px;
-    
             @include flex();
 
             .moeda {
-                width: 30%;
-                height: 100%;
+                @include boxSize(100%, 30%);
                 background-color: $cor-padrao;
                 color: $cor-padrao-reversa;
                 font-size: 1.2em;
@@ -274,8 +253,7 @@ main {
         @include flex($direction: column, $gap: 1em);
 
         [class^="botao"] {
-            height: 25%;
-            width: 95%;
+            @include boxSize(25%, 95%);
             background-color: $fundo-padrao;
             color: $fundo-padrao-reverso;
             border: 2px solid $cor;
@@ -298,8 +276,7 @@ main {
             overflow: hidden;
 
             div {
-                height: 200%;
-                width: 100%;
+                @include boxSize(200%, 100%);
                 padding: .6em 0px 1.2em 0px;
         
                 position: relative;
@@ -339,8 +316,7 @@ main {
             }
 
             .fundo-limpar, .fundo-limpou {
-                height: 100%;
-                width: 100%;
+                @include boxSize(100%, 100%);
                 border-radius: 8px;
         
                 @include flex($justfy: center);
@@ -357,9 +333,9 @@ main {
             }
         
             .fundo-limpou {
+                width: 0px;
                 background-color: $cor;
                 right: 0%;
-                width: 0px;
             }
             
         }
@@ -374,16 +350,14 @@ main {
 
 footer {
     background-color: $fundo-padrao;
-    height: 7%;
-    width: 100%;
+    @include boxSize(7%, 100%);
     padding: 0em 0.5em;
 
     @include flex();
 
     #esquerda, #direita {
-        width: 100%;
+        @include boxSize(no, 50%);
         padding: 0em 0.5em;
-
         @include flex();
     }
 
@@ -396,14 +370,12 @@ footer {
         }
 
         #divisoria {
-            width: 0.1em;
-            height: 1.5em;
+            @include boxSize(1.5em, 0.1em);
             background-color: black;
         }
 
         #toggle-button {
-            width: 4em;
-            height: 2em;
+            @include boxSize(2em, 4em);
             background-color: $fundo-padrao-reverso;
         
             padding: 0px .2em;
@@ -413,8 +385,7 @@ footer {
             @include flex();
 
             #toggle-button-circle {
-                width: 1.7em;
-                height: 1.7em;
+                @include boxSize(1.7em, 1.7em);
                 background-color: $cor;
                 
                 border-radius: 50px;
@@ -435,7 +406,7 @@ footer {
             @include flex($direction: row, $aling: center, $justfy: space-between, $gap: .5em);
 
             #inserir-cor {
-                width: 5.5em;
+                @include boxSize(no, 5.5em);
             
                 padding-left: .2em;
                 border-radius: 10px;
@@ -454,8 +425,7 @@ footer {
         position: relative;
 
         [class^="cor"] {
-            height: 1.7em;
-            width: 1.7em;
+            @include boxSize(1.7em, 1.7em);
             background-color: $cor;
             box-shadow: $sombra;
             border-radius: 50%;

@@ -20,8 +20,8 @@
 }
 
 html, body {
-  width: 100vw;
   height: 100vh;
+  width: 100vw;
   background-color: rgb(34, 34, 34);
 }
 
@@ -98,10 +98,10 @@ main .gadget-1 .option-5:hover > .efeito-gdt1 {
 main .gadget-1 #search-box {
   height: 2.2em;
   width: 25em;
+  padding-left: 1em;
   background-color: var(--fundo-padrao-reverso);
   color: var(--padrao);
   font-weight: 600;
-  padding-left: 1em;
   border-radius: 10px;
   border: 4px solid var(--cor);
   filter: grayscale(40%);
@@ -111,8 +111,8 @@ main .gadget-1 #search-box:focus {
 }
 main .gadget-1 #search-outline, main .gadget-1 #ellipse-outline {
   position: relative;
-  transition-duration: 0.15s;
   top: -10%;
+  transition-duration: 0.15s;
 }
 main .gadget-1 #search-outline {
   font-size: 1.2em;
@@ -158,10 +158,10 @@ main .gadget-3 #topo #botoes, main .gadget-3 #topo #icons {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 1em;
   height: 100%;
   width: 100%;
   color: var(--padrao-reverso);
+  gap: 1em;
 }
 main .gadget-3 #topo #botoes .quantia, main .gadget-3 #topo #botoes .reset {
   filter: saturate(120%);
@@ -207,7 +207,7 @@ main .gadget-3 #valores {
 }
 main .gadget-3 #valores .valor {
   height: 100%;
-  width: 25%;
+  width: 20%;
   display: flex;
   gap: 0;
   flex-direction: column;
@@ -249,8 +249,8 @@ main .gadget-3 #moedas {
   justify-content: space-between;
 }
 main .gadget-3 #moedas .moeda {
-  width: 30%;
   height: 100%;
+  width: 30%;
   background-color: var(--padrao);
   color: var(--padrao-reverso);
   font-size: 1.2em;
@@ -350,9 +350,9 @@ main .gadget-4 .botao-3-gdt3 .fundo-limpar {
   background-color: var(--padrao);
 }
 main .gadget-4 .botao-3-gdt3 .fundo-limpou {
+  width: 0px;
   background-color: var(--cor);
   right: 0%;
-  width: 0px;
 }
 main .gadget-4 .botao-4-gdt3 {
   background-color: var(--cor);
@@ -372,7 +372,7 @@ footer {
   justify-content: space-between;
 }
 footer #esquerda, footer #direita {
-  width: 100%;
+  width: 50%;
   padding: 0em 0.5em;
   display: flex;
   gap: 0;
@@ -388,13 +388,13 @@ footer #esquerda #paragrafo-footer {
   color: var(--fundo-padrao-reverso);
 }
 footer #esquerda #divisoria {
-  width: 0.1em;
   height: 1.5em;
+  width: 0.1em;
   background-color: black;
 }
 footer #esquerda #toggle-button {
-  width: 4em;
   height: 2em;
+  width: 4em;
   background-color: var(--fundo-padrao-reverso);
   padding: 0px 0.2em;
   border-radius: 50px;
@@ -406,8 +406,8 @@ footer #esquerda #toggle-button {
   justify-content: space-between;
 }
 footer #esquerda #toggle-button #toggle-button-circle {
-  width: 1.7em;
   height: 1.7em;
+  width: 1.7em;
   background-color: var(--cor);
   border-radius: 50px;
   position: absolute;

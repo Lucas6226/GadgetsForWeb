@@ -27,11 +27,19 @@ $sombra: var(--sombra);
     @return map-merge($array, ($key : $value));
 }
 
-@mixin boxSize($height, $width, $padding: 0em, $margin: 0em) {
-    height: $height;
-    width: $height;
-    padding: $padding;
-    margin: $margin;
+@mixin boxSize($height, $width, $padding: no, $margin: no) {
+    @if $height != no {
+        height: $height;
+    }
+    @if $width != no {
+        width: $width;
+    }
+    @if $padding != no {
+        padding: $padding;
+    }
+    @if $margin != no {
+        margin: $margin;
+    }
 }
 
 @mixin flex($direction: row, $aling: center, $justfy: space-between, $gap: 0) { 
@@ -73,5 +81,21 @@ $sombra: var(--sombra);
     } @else {
         background-color: red;
         content: '[ERRO]';
+    }
+}
+
+@mixin position($position, $top: no, $bottom: no, $left: no, $right: no) {
+    position: $position;
+    @if $top != no {
+        top: $top;
+    } 
+    @if $bottom != no {
+        bottom: $bottom;
+    }
+    @if $left != no {
+        left: $left;
+    }
+    @if $right != no {
+        right: $right;
     }
 }
