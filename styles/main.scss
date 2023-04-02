@@ -1,0 +1,504 @@
+@charset "URF-8";
+@import 'praticos'; 
+
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+    outline: none;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(34, 34, 34); 
+}
+
+main {
+    height: 93%;
+    width: 100%;
+
+    display: grid;
+    grid-template-rows: repeat(50, 1fr);
+    grid-template-columns: repeat(50, 1fr);
+
+    [class^="gadget"] {
+        background-color: $fundo-padrao;
+        border-radius: 15px;
+        box-shadow: $sombra;
+    }
+
+    .gadget-1 {
+        grid-area: 2/2 / 5/47;
+        padding: 0px 3em;
+        
+        color: $fundo-padrao-reverso;
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        >div {
+            display: flex;
+            align-items: center;
+        }
+
+        #options {
+            justify-content: right;
+            gap: 4em;
+        }
+
+
+        [class^="option"] {
+            height: 1.2em;
+            width: 60px;
+            text-align: center;
+            transition-duration: .9s;
+            animation-timing-function: ease-in;
+
+            &:hover {
+                color: $cor-padrao;
+            }
+
+            p {
+                position: absolute; 
+            }
+
+            >.efeito-gdt1 {
+                height: 1.2em;
+                width: 0em;
+                background-color: $cor;
+        
+                border-radius: 3px;
+        
+                position: absolute;
+        
+                animation-timing-function: ease-in;
+                transition-duration: .5s;
+            }
+        }
+
+        .option-1:hover > .efeito-gdt1 {width: 2.8em;}
+        .option-2:hover > .efeito-gdt1 {width: 3.0em;}
+        .option-3:hover > .efeito-gdt1 {width: 3.3em;}
+        .option-4:hover > .efeito-gdt1 {width: 3.1em;}
+        .option-5:hover > .efeito-gdt1 {width: 3.9em;}
+
+        #search-box {
+            height: 2.2em;
+            width: 25em;
+            background-color: $fundo-padrao-reverso;
+            color: $cor-padrao;
+            font-weight: 600;
+            padding-left: 1em;
+            
+            border-radius: 10px;
+            border: 4px solid $cor;
+            filter: grayscale(40%);
+
+            &:focus {
+                filter: grayscale(0%) saturate(110%);
+            }
+        }
+
+
+
+        #search-outline, #ellipse-outline {
+            position: relative;
+            transition-duration: .15s;
+            top: -10%;
+        } 
+
+        #search-outline {
+            font-size: 1.2em;
+            transform: translateX(-140%);
+
+            &:hover {
+                color: $cor;
+            }
+        }
+
+        #ellipse-outline {
+            font-size: 2.1em;
+        }
+    }
+
+    .gadget-2 {
+        grid-area: 2/48 / 5/50;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #grid-outline {
+            font-size: 1.8em;
+            color: $cor-padrao-reversa;
+    
+            &:hover {
+                color: $cor;
+            }            
+        }
+    }
+
+    .gadget-3 {
+        grid-area: 7/2 / 26/16;
+        padding: 1em;
+
+        #topo {
+            height: 10%;
+            width: 100%;
+            display: flex;
+
+            #botoes, #icons {
+                display: flex;
+                gap: 1em;
+                height: 100%;
+                width: 100%;
+                color: $cor-padrao-reversa;
+        
+            }
+
+            #botoes {
+                .quantia, .reset {
+                    filter: saturate(120%);
+                    background-color: $cor;
+                    border-radius: 5px;
+                    
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .quantia {
+                    height: 100%;
+                    width: 50%;
+                }
+                
+                .reset {
+                    height: 100%;
+                    width: 25%;
+                    transition-duration: .2s;
+        
+                    &:hover{
+                        transform: translateY(-10%);
+                    }
+                    
+                }
+            }
+            
+            #icons {
+                font-size: 1.8em;
+                
+                justify-content: right;
+                align-items: center;
+    
+    
+                .icon {
+                    border-radius: 50%;
+                    padding: .1em;
+            
+                    transition-duration: .2s;
+                }
+                
+            }
+        }
+           
+        #valores {
+            margin: 1.5em 0px;
+            
+            height: 50%;
+            width: 100%;
+    
+            display: flex;
+
+            .valor {
+                height: 100%;
+                width: 25%;
+        
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+
+                >div {
+                    border-radius: 10px;
+                    width: 90%;
+            
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                
+                .mais, .menos {
+                    height: 25%;
+                    background-color: $cor;
+                    /* transition-duration: .1s; */
+                }
+                
+                .icon {
+                    color: $cor-padrao-reversa;
+                    font-size: 1.8em;
+                }
+
+                #valor {
+                    height: 45%;
+                    background-color: $fundo-padrao;
+                    color: $cor-padrao-reversa;
+            
+                    border: 1px solid $cor-padrao-reversa;
+                }
+            }
+        }
+
+        #moedas {
+            height: 20%;
+            width: 100%;
+            margin: 1em 0px;
+    
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .moeda {
+                width: 30%;
+                height: 100%;
+                background-color: $cor-padrao;
+                color: $cor-padrao-reversa;
+                font-size: 1.2em;
+                font-weight: 600;
+                
+                border-radius: 10px;
+                border: 3px solid $cor;
+        
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    filter: brightness(170%);
+                }
+                
+            }
+        }
+    }
+
+    .gadget-4 {
+        grid-area: 30/2 / 50/9;
+        padding: 1em;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+
+        [class^="botao"] {
+            height: 25%;
+            width: 95%;
+            background-color: $fundo-padrao;
+            color: $fundo-padrao-reverso;
+            border: 2px solid $cor;
+            position: relative;
+    
+            font-weight: 600;
+            font-size: 1.2em;
+    
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            transition-duration: .35s;
+            animation-timing-function: ease-in-out;
+        }
+
+        .botao-1-gdt3 {
+            border: none;
+            background-color: $cor;
+            color: $cor-padrao-reversa;   
+            overflow: hidden;
+
+            div {
+                height: 200%;
+                width: 100%;
+                padding-top: .6em;
+        
+                position: relative;
+                top: 50%;;
+        
+                display: flex;
+                align-items: center;
+                gap: 23%;
+                flex-direction: column;
+        
+                transition-duration: .3s;
+            }
+            
+            p {
+                transition-duration: .2s;
+                position: relative;
+            }
+
+            &:hover p {
+                transform: translateY(-20%);
+            }
+        }
+        
+        .botao-2-gdt3:hover {
+            border: 2px solid $cor-padrao-reversa;
+
+            &:hover p {
+                color: $cor;
+            }
+
+        }
+
+        .botao-3-gdt3 {
+            p {
+                transition-duration: .2s;
+            }
+
+            &:hover p {
+                letter-spacing: .2em;
+            }
+
+            .fundo-limpar, .fundo-limpou {
+                height: 100%;
+                width: 100%;
+                border-radius: 8px;
+        
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                overflow-x: hidden;
+                
+                transition-duration: .25s;
+                transition-timing-function: ease-in;
+            }
+
+            .fundo-limpar {
+                left: 0%;
+                background-color: $cor-padrao;
+            }
+        
+            .fundo-limpou {
+                background-color: $cor;
+                right: 0%;
+                width: 0px;
+            }
+            
+        }
+
+        .botao-4-gdt3 {
+            background-color: $cor;
+            transition-duration: .1s;
+            border: none;
+        }
+    }
+}
+
+footer {
+    background-color: $fundo-padrao;
+    height: 7%;
+    width: 100%;
+    padding: 0em 0.5em;
+
+    display: flex;
+    align-items: center;
+
+    #esquerda, #direita {
+        width: 100%;
+        padding: 0em 0.5em;
+
+        display: flex;
+        align-items: center;
+    }
+
+    #esquerda {
+        gap: 2em;
+
+        #paragrafo-footer{
+            color: $fundo-padrao-reverso;
+        }
+
+        #divisoria {
+            width: 0.1em;
+            height: 1.5em;
+            background-color: black;
+        }
+
+        #toggle-button {
+            width: 4em;
+            height: 2em;
+            background-color: $fundo-padrao-reverso;
+        
+            padding: 0px .2em;
+            border-radius: 50px;
+        
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            #toggle-button-circle {
+                width: 1.7em;
+                height: 1.7em;
+                background-color: $cor;
+                
+                border-radius: 50px;
+            
+                position: absolute;
+                left: 55%;
+                transition-duration: .4s;
+            }
+        }
+        
+        #adicionar-cor {
+            color: $cor-padrao-reversa;
+            background-color: $fundo-padrao;
+            padding: .3em;
+            font-size: 1.5em;
+            border-radius: 10px;
+            
+            display: flex;
+            gap: .5em;
+
+            #inserir-cor {
+                width: 5.5em;
+            
+                padding-left: .2em;
+                border-radius: 10px;
+            
+                font-size: .6em;
+                font-weight: 600;
+                letter-spacing: .05em;
+            }
+        }  
+    }
+
+    #direita {
+        justify-content: right;
+        gap: 4em;
+    
+        position: relative;
+
+        [class^="cor"] {
+            height: 1.7em;
+            width: 1.7em;
+            background-color: $cor;
+            box-shadow: $sombra;
+            border-radius: 50%;
+        
+            position: relative;
+        
+            transition-duration: .3s;
+
+            &:hover {
+                transform: translateY(-25%);
+            }
+            
+        }
+    }
+
+}

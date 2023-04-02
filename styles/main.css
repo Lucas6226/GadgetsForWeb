@@ -1,0 +1,406 @@
+:root {
+  --fundo-padrao: rgba(0, 0, 0, 0.2);
+  --padrao: rgb(20, 20, 20);
+  --fundo-padrao-reverso: rgb(200, 200, 200);
+  --padrao-reverso: rgb(190, 190, 190);
+  --cor: purple;
+  --sombra: none;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  outline: none;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(34, 34, 34);
+}
+
+main {
+  height: 93%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(50, 1fr);
+  grid-template-columns: repeat(50, 1fr);
+}
+main [class^=gadget] {
+  background-color: var(--fundo-padrao);
+  border-radius: 15px;
+  box-shadow: var(--sombra);
+}
+main .gadget-1 {
+  grid-area: 2/2/5/47;
+  padding: 0px 3em;
+  color: var(--fundo-padrao-reverso);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .gadget-1 > div {
+  display: flex;
+  align-items: center;
+}
+main .gadget-1 #options {
+  justify-content: right;
+  gap: 4em;
+}
+main .gadget-1 [class^=option] {
+  height: 1.2em;
+  width: 60px;
+  text-align: center;
+  transition-duration: 0.9s;
+  animation-timing-function: ease-in;
+}
+main .gadget-1 [class^=option]:hover {
+  color: var(--padrao);
+}
+main .gadget-1 [class^=option] p {
+  position: absolute;
+}
+main .gadget-1 [class^=option] > .efeito-gdt1 {
+  height: 1.2em;
+  width: 0em;
+  background-color: var(--cor);
+  border-radius: 3px;
+  position: absolute;
+  animation-timing-function: ease-in;
+  transition-duration: 0.5s;
+}
+main .gadget-1 .option-1:hover > .efeito-gdt1 {
+  width: 2.8em;
+}
+main .gadget-1 .option-2:hover > .efeito-gdt1 {
+  width: 3em;
+}
+main .gadget-1 .option-3:hover > .efeito-gdt1 {
+  width: 3.3em;
+}
+main .gadget-1 .option-4:hover > .efeito-gdt1 {
+  width: 3.1em;
+}
+main .gadget-1 .option-5:hover > .efeito-gdt1 {
+  width: 3.9em;
+}
+main .gadget-1 #search-box {
+  height: 2.2em;
+  width: 25em;
+  background-color: var(--fundo-padrao-reverso);
+  color: var(--padrao);
+  font-weight: 600;
+  padding-left: 1em;
+  border-radius: 10px;
+  border: 4px solid var(--cor);
+  filter: grayscale(40%);
+}
+main .gadget-1 #search-box:focus {
+  filter: grayscale(0%) saturate(110%);
+}
+main .gadget-1 #search-outline, main .gadget-1 #ellipse-outline {
+  position: relative;
+  transition-duration: 0.15s;
+  top: -10%;
+}
+main .gadget-1 #search-outline {
+  font-size: 1.2em;
+  transform: translateX(-140%);
+}
+main .gadget-1 #search-outline:hover {
+  color: var(--cor);
+}
+main .gadget-1 #ellipse-outline {
+  font-size: 2.1em;
+}
+main .gadget-2 {
+  grid-area: 2/48/5/50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .gadget-2 #grid-outline {
+  font-size: 1.8em;
+  color: var(--padrao-reverso);
+}
+main .gadget-2 #grid-outline:hover {
+  color: var(--cor);
+}
+main .gadget-3 {
+  grid-area: 7/2/26/16;
+  padding: 1em;
+}
+main .gadget-3 #topo {
+  height: 10%;
+  width: 100%;
+  display: flex;
+}
+main .gadget-3 #topo #botoes, main .gadget-3 #topo #icons {
+  display: flex;
+  gap: 1em;
+  height: 100%;
+  width: 100%;
+  color: var(--padrao-reverso);
+}
+main .gadget-3 #topo #botoes .quantia, main .gadget-3 #topo #botoes .reset {
+  filter: saturate(120%);
+  background-color: var(--cor);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .gadget-3 #topo #botoes .quantia {
+  height: 100%;
+  width: 50%;
+}
+main .gadget-3 #topo #botoes .reset {
+  height: 100%;
+  width: 25%;
+  transition-duration: 0.2s;
+}
+main .gadget-3 #topo #botoes .reset:hover {
+  transform: translateY(-10%);
+}
+main .gadget-3 #topo #icons {
+  font-size: 1.8em;
+  justify-content: right;
+  align-items: center;
+}
+main .gadget-3 #topo #icons .icon {
+  border-radius: 50%;
+  padding: 0.1em;
+  transition-duration: 0.2s;
+}
+main .gadget-3 #valores {
+  margin: 1.5em 0px;
+  height: 50%;
+  width: 100%;
+  display: flex;
+}
+main .gadget-3 #valores .valor {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+main .gadget-3 #valores .valor > div {
+  border-radius: 10px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .gadget-3 #valores .valor .mais, main .gadget-3 #valores .valor .menos {
+  height: 25%;
+  background-color: var(--cor);
+  /* transition-duration: .1s; */
+}
+main .gadget-3 #valores .valor .icon {
+  color: var(--padrao-reverso);
+  font-size: 1.8em;
+}
+main .gadget-3 #valores .valor #valor {
+  height: 45%;
+  background-color: var(--fundo-padrao);
+  color: var(--padrao-reverso);
+  border: 1px solid var(--padrao-reverso);
+}
+main .gadget-3 #moedas {
+  height: 20%;
+  width: 100%;
+  margin: 1em 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .gadget-3 #moedas .moeda {
+  width: 30%;
+  height: 100%;
+  background-color: var(--padrao);
+  color: var(--padrao-reverso);
+  font-size: 1.2em;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 3px solid var(--cor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .gadget-3 #moedas .moeda:hover {
+  filter: brightness(170%);
+}
+main .gadget-4 {
+  grid-area: 30/2/50/9;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+main .gadget-4 [class^=botao] {
+  height: 25%;
+  width: 95%;
+  background-color: var(--fundo-padrao);
+  color: var(--fundo-padrao-reverso);
+  border: 2px solid var(--cor);
+  position: relative;
+  font-weight: 600;
+  font-size: 1.2em;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.35s;
+  animation-timing-function: ease-in-out;
+}
+main .gadget-4 .botao-1-gdt3 {
+  border: none;
+  background-color: var(--cor);
+  color: var(--padrao-reverso);
+  overflow: hidden;
+}
+main .gadget-4 .botao-1-gdt3 div {
+  height: 200%;
+  width: 100%;
+  padding-top: 0.6em;
+  position: relative;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  gap: 23%;
+  flex-direction: column;
+  transition-duration: 0.3s;
+}
+main .gadget-4 .botao-1-gdt3 p {
+  transition-duration: 0.2s;
+  position: relative;
+}
+main .gadget-4 .botao-1-gdt3:hover p {
+  transform: translateY(-20%);
+}
+main .gadget-4 .botao-2-gdt3:hover {
+  border: 2px solid var(--padrao-reverso);
+}
+main .gadget-4 .botao-2-gdt3:hover:hover p {
+  color: var(--cor);
+}
+main .gadget-4 .botao-3-gdt3 p {
+  transition-duration: 0.2s;
+}
+main .gadget-4 .botao-3-gdt3:hover p {
+  letter-spacing: 0.2em;
+}
+main .gadget-4 .botao-3-gdt3 .fundo-limpar, main .gadget-4 .botao-3-gdt3 .fundo-limpou {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  overflow-x: hidden;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in;
+}
+main .gadget-4 .botao-3-gdt3 .fundo-limpar {
+  left: 0%;
+  background-color: var(--padrao);
+}
+main .gadget-4 .botao-3-gdt3 .fundo-limpou {
+  background-color: var(--cor);
+  right: 0%;
+  width: 0px;
+}
+main .gadget-4 .botao-4-gdt3 {
+  background-color: var(--cor);
+  transition-duration: 0.1s;
+  border: none;
+}
+
+footer {
+  background-color: var(--fundo-padrao);
+  height: 7%;
+  width: 100%;
+  padding: 0em 0.5em;
+  display: flex;
+  align-items: center;
+}
+footer #esquerda, footer #direita {
+  width: 100%;
+  padding: 0em 0.5em;
+  display: flex;
+  align-items: center;
+}
+footer #esquerda {
+  gap: 2em;
+}
+footer #esquerda #paragrafo-footer {
+  color: var(--fundo-padrao-reverso);
+}
+footer #esquerda #divisoria {
+  width: 0.1em;
+  height: 1.5em;
+  background-color: black;
+}
+footer #esquerda #toggle-button {
+  width: 4em;
+  height: 2em;
+  background-color: var(--fundo-padrao-reverso);
+  padding: 0px 0.2em;
+  border-radius: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+footer #esquerda #toggle-button #toggle-button-circle {
+  width: 1.7em;
+  height: 1.7em;
+  background-color: var(--cor);
+  border-radius: 50px;
+  position: absolute;
+  left: 55%;
+  transition-duration: 0.4s;
+}
+footer #esquerda #adicionar-cor {
+  color: var(--padrao-reverso);
+  background-color: var(--fundo-padrao);
+  padding: 0.3em;
+  font-size: 1.5em;
+  border-radius: 10px;
+  display: flex;
+  gap: 0.5em;
+}
+footer #esquerda #adicionar-cor #inserir-cor {
+  width: 5.5em;
+  padding-left: 0.2em;
+  border-radius: 10px;
+  font-size: 0.6em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+footer #direita {
+  justify-content: right;
+  gap: 4em;
+  position: relative;
+}
+footer #direita [class^=cor] {
+  height: 1.7em;
+  width: 1.7em;
+  background-color: var(--cor);
+  box-shadow: var(--sombra);
+  border-radius: 50%;
+  position: relative;
+  transition-duration: 0.3s;
+}
+footer #direita [class^=cor]:hover {
+  transform: translateY(-25%);
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,19 @@
+:root {
+    --fundo-padrao: rgba(0, 0, 0, 0.2);
+    --padrao: rgb(20, 20, 20);
+
+    --fundo-padrao-reverso: rgb(200, 200, 200);
+    --padrao-reverso: rgb(190, 190, 190);   
+
+    --cor: purple;
+    --sombra: none;
+}
+
+$fundo-padrao: var(--fundo-padrao);
+$cor-padrao: var(--padrao);
+
+$fundo-padrao-reverso: var(--fundo-padrao-reverso);
+$cor-padrao-reversa: var(--padrao-reverso);
+
+$cor: var(--cor);
+$sombra: var(--sombra);
