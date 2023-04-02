@@ -23,3 +23,55 @@ $sombra: var(--sombra);
 
 // funções
 
+@function addict($array, $key, $value) {
+    @return map-merge($array, ($key : $value));
+}
+
+@mixin boxSize($height, $width, $padding: 0em, $margin: 0em) {
+    height: $height;
+    width: $height;
+    padding: $padding;
+    margin: $margin;
+}
+
+@mixin flex($direction: row, $aling: center, $justfy: space-between, $gap: 0) { 
+    display: flex;
+    gap: $gap;
+
+    @if $direction == column {
+        flex-direction: column;
+    } @else if $direction == column-reverse {
+        flex-direction: column-reverse;
+    } @else if $direction == row {
+        flex-direction: row;
+    } @else if $direction == row-reverse {
+        flex-direction: row-reverse;
+    } @else {
+        background-color: red;
+        content: '[ERRO]';
+    }
+
+    @if $aling == center {
+        align-items: center;
+    } @else {
+        background-color: red;
+        content: '[ERRO]';
+    }
+
+    @if $justfy == space-between {
+        justify-content: space-between;
+    } @else if $justfy == space-around {
+        justify-content: space-around;
+    } @else if $justfy == space-evenly {
+        justify-content: space-evenly;
+    } @else if $justfy == right {
+        justify-content: right;
+    } @else if $justfy == left {
+        justify-content: left;
+    } @else if $justfy == center {
+        justify-content: center;
+    } @else {
+        background-color: red;
+        content: '[ERRO]';
+    }
+}

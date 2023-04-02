@@ -42,12 +42,17 @@ main .gadget-1 {
   padding: 0px 3em;
   color: var(--fundo-padrao-reverso);
   display: flex;
+  gap: 0;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 main .gadget-1 > div {
   display: flex;
+  gap: 0;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 main .gadget-1 #options {
   justify-content: right;
@@ -122,8 +127,10 @@ main .gadget-1 #ellipse-outline {
 main .gadget-2 {
   grid-area: 2/48/5/50;
   display: flex;
-  justify-content: center;
+  gap: 0;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 main .gadget-2 #grid-outline {
   font-size: 1.8em;
@@ -140,9 +147,17 @@ main .gadget-3 #topo {
   height: 10%;
   width: 100%;
   display: flex;
+  gap: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 main .gadget-3 #topo #botoes, main .gadget-3 #topo #icons {
   display: flex;
+  gap: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   gap: 1em;
   height: 100%;
   width: 100%;
@@ -153,6 +168,8 @@ main .gadget-3 #topo #botoes .quantia, main .gadget-3 #topo #botoes .reset {
   background-color: var(--cor);
   border-radius: 5px;
   display: flex;
+  gap: 0;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
@@ -183,11 +200,16 @@ main .gadget-3 #valores {
   height: 50%;
   width: 100%;
   display: flex;
+  gap: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 main .gadget-3 #valores .valor {
   height: 100%;
   width: 25%;
   display: flex;
+  gap: 0;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -196,8 +218,10 @@ main .gadget-3 #valores .valor > div {
   border-radius: 10px;
   width: 90%;
   display: flex;
-  justify-content: center;
+  gap: 0;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 main .gadget-3 #valores .valor .mais, main .gadget-3 #valores .valor .menos {
   height: 25%;
@@ -219,8 +243,10 @@ main .gadget-3 #moedas {
   width: 100%;
   margin: 1em 0px;
   display: flex;
-  justify-content: space-between;
+  gap: 0;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 main .gadget-3 #moedas .moeda {
   width: 30%;
@@ -232,8 +258,10 @@ main .gadget-3 #moedas .moeda {
   border-radius: 10px;
   border: 3px solid var(--cor);
   display: flex;
-  justify-content: center;
+  gap: 0;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 main .gadget-3 #moedas .moeda:hover {
   filter: brightness(170%);
@@ -242,9 +270,10 @@ main .gadget-4 {
   grid-area: 30/2/50/9;
   padding: 1em;
   display: flex;
+  gap: 1em;
   flex-direction: column;
   align-items: center;
-  gap: 1em;
+  justify-content: space-between;
 }
 main .gadget-4 [class^=botao] {
   height: 25%;
@@ -257,8 +286,10 @@ main .gadget-4 [class^=botao] {
   font-size: 1.2em;
   border-radius: 10px;
   display: flex;
-  justify-content: center;
+  gap: 0;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   transition-duration: 0.35s;
   animation-timing-function: ease-in-out;
 }
@@ -271,13 +302,14 @@ main .gadget-4 .botao-1-gdt3 {
 main .gadget-4 .botao-1-gdt3 div {
   height: 200%;
   width: 100%;
-  padding-top: 0.6em;
+  padding: 0.6em 0px 1.2em 0px;
   position: relative;
   top: 50%;
   display: flex;
-  align-items: center;
-  gap: 23%;
+  gap: 0;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   transition-duration: 0.3s;
 }
 main .gadget-4 .botao-1-gdt3 p {
@@ -304,8 +336,10 @@ main .gadget-4 .botao-3-gdt3 .fundo-limpar, main .gadget-4 .botao-3-gdt3 .fundo-
   width: 100%;
   border-radius: 8px;
   display: flex;
-  justify-content: center;
+  gap: 0;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   position: absolute;
   overflow-x: hidden;
   transition-duration: 0.25s;
@@ -332,15 +366,22 @@ footer {
   width: 100%;
   padding: 0em 0.5em;
   display: flex;
+  gap: 0;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 footer #esquerda, footer #direita {
   width: 100%;
   padding: 0em 0.5em;
   display: flex;
+  gap: 0;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 footer #esquerda {
+  justify-content: left;
   gap: 2em;
 }
 footer #esquerda #paragrafo-footer {
@@ -359,7 +400,10 @@ footer #esquerda #toggle-button {
   border-radius: 50px;
   position: relative;
   display: flex;
+  gap: 0;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 footer #esquerda #toggle-button #toggle-button-circle {
   width: 1.7em;
@@ -378,6 +422,9 @@ footer #esquerda #adicionar-cor {
   border-radius: 10px;
   display: flex;
   gap: 0.5em;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 footer #esquerda #adicionar-cor #inserir-cor {
   width: 5.5em;
