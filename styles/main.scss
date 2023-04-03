@@ -14,6 +14,9 @@
 html, body {
     @include boxSize(100vh, 100vw);
     background-color: rgb(34, 34, 34); 
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrbyD6YLZoTK0e1XZByQknclwQyabbdjbEWw&usqp=CAU);
+    background-repeat: no-repeat;
+    background-size: 100%, 100%;
 }
 
 main {
